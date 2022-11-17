@@ -1,0 +1,16 @@
+<section class="customers">
+  {{ $customers := .Site.Data.customers.data }}
+  {{ range $customer := $customers }}
+    {{ if $customer.isFeatured }}
+      <div>
+        {{ $image := resources.Get $customer.logoSrc }}
+        <img src="{{$image.RelPermalink}}" alt="{{$customer.name}} logo">
+        <p>{{ $customer.quote }}</p>
+        <p>{{ $customer.author }}</p>
+        <p>{{ $customer.subtitle }}</p>
+      </div>
+    {{ else }}
+      <img src="https://imgix.datadoghq.com/img/customers/logos/{{$customer.logo}}.png?h=100&dpr=2&auto=compress,format" alt="{{$customer.name}} logo">
+    {{ end }}
+  {{ end }}
+</section>

@@ -1,0 +1,62 @@
+{
+  "data": [
+    {
+      "name": "airbnb",
+      "logo": "airbnb",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "peloton",
+      "logo": "peloton",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "adroll",
+      "isLogoSrcLocal": true,
+      "logoSrc": "images/adroll.png",
+      "isFeatured": true,
+      "backgroundColor": "pink",
+      "quote": "Datadog has been instrumental in managing our real-time infrastructure, globally distributed in 5 data centers across hundreds of instances, and thousands of different metrics and dimensions for each host. I can't believe there was a time when we didn't have Datadog.",
+      "author": "Valentino Volonghi",
+      "subtitle": "Chief Technology Officer"
+    },
+    {
+      "name": "evernote",
+      "logo": "evernote",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "samsung",
+      "logo": "samsung",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "nginx",
+      "logo": "nginx",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "pagerduty",
+      "logo": "pagerduty",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "whole foods",
+      "logo": "wholefoods",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    },
+    {
+      "name": "at&t",
+      "logo": "at&t",
+      "isFeatured": false,
+      "backgroundColor": "pink"
+    }
+  ]
+}
