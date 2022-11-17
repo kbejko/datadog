@@ -2,11 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
 @import "vars";
 @import "partials/pricing";
+@import "partials/postcards";
 
 body {
-  // font-family: $font-family-base;
-  // font-size: $font-size-base;
-  // line-height: $line-height-base;
   display: grid;
   grid-template-columns: minmax(max-content, 166px) 1fr;
   column-gap: 30px;

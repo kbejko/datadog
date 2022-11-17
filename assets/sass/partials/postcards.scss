@@ -1,0 +1,40 @@
+@mixin tint-bg($color, $opacity: .8) {
+  box-shadow: inset 0 0 0 100vw rgba($color, $opacity);
+}
+.postcards {
+  grid-column: 1 / span all;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(556px, 1fr));
+  gap: 30px;
+
+  > div {
+    min-height: 280px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-blocK: 8px;
+  }
+
+  p {
+    font-size: .75rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .theme-blue {
+    @include tint-bg($blue, .9);
+  }
+  .theme-green {
+    @include tint-bg($green);
+  }
+  .theme-red {
+    @include tint-bg($red);
+  }
+}
