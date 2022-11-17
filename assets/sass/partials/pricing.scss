@@ -1,0 +1,55 @@
+.pricing {
+  background-color: $gray-light;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 32px;
+  padding: 24px;
+
+  > div {
+    min-height: 460px;
+  }
+
+  > div:not(:last-child) {
+    border-right: 1px solid $gray-1;
+    padding-right: 16px;
+  }
+
+  .title, .price {
+    font-weight: 700;
+  }
+
+  .title {
+    font-size: .75rem;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .content {
+    margin-block: 20px 48px;
+
+  }
+
+  a {
+    margin-top: auto;
+  }
+
+  .theme-purple {
+    .title, .cta {
+      color: $purple
+    }
+  }
+  .theme-green {
+    .title, .cta {
+      color: $green
+    }
+  }
+  .theme-red {
+    .title, .cta {
+      color: $red
+    }
+  }
+}

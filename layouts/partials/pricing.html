@@ -1,0 +1,12 @@
+<section class="pricing">
+  {{ range where site.RegularPages "Type" "pricing"}}
+  <div class="d-flex flex-column theme-{{.Params.theme}}">
+    <h3 class="title text-uppercase">{{.Title}}</h3>
+    <p>Starting at</p>
+    <p class="price"><strong>{{.Params.Price}}</strong></p>
+    <small>Per host, per month*</small>
+    <article class="content">{{ .Content }}</article>
+    <a class="cta" href="#">See Details</a>
+  </div>
+  {{ end }}
+</section>
