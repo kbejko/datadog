@@ -1,0 +1,9 @@
+<section class="postcard">
+  {{ range where site.RegularPages "Type" "posts"}}
+  <p>{{.Params.tag}}</p>
+  <h3>{{.Title}}</h3>
+    {{ with .Resources.GetMatch .Params.imageSrc }}
+      <img src="{{ .RelPermalink }}" alt="hello" />
+    {{end}}
+  {{ end }}
+</section>
