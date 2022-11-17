@@ -1,3 +1,154 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Datadog'
+
+[menu]
+[[menu.main]]
+  name = 'Product'
+  url = '#'
+  weight = 10
+[[menu.main]]
+  name = 'Docs'
+  url = '#'
+  weight = 20
+[[menu.main]]
+  name = 'Pricing'
+  url = '#'
+  weight = 30
+[[menu.main]]
+  name = 'Customers'
+  url = '#'
+  weight = 40
+[[menu.main]]
+  name = 'About'
+  url = '#'
+  weight = 50
+[[menu.main]]
+  name = 'Blog'
+  url = '#'
+  weight = 60
+
+[[menu.footer]]
+  identifier = 'Product-1'
+  name = 'Product'
+  weight = 10
+[[menu.footer]]
+  name = 'Features'
+  url = '#'
+  weight = 110
+  parent = 'Product-1'
+[[menu.footer]]
+  name = 'APM'
+  url = '#'
+  weight = 115
+  parent = 'Product-1'
+[[menu.footer]]
+  name = 'Integrations'
+  url = '#'
+  weight = 120
+  parent = 'Product-1'
+[[menu.footer]]
+  name = 'Alerts'
+  url = '#'
+  weight = 125
+  parent = 'Product-1'
+[[menu.footer]]
+  name = 'API'
+  url = '#'
+  weight = 130
+  parent = 'Product-1'
+[[menu.footer]]
+  name = 'Pricing'
+  url = '#'
+  weight = 135
+  parent = 'Product-1'
+
+[[menu.footer]]
+  identifier = 'Product-2'
+  name = 'Product'
+  weight = 11
+[[menu.footer]]
+  name = 'Documentation'
+  url = '#'
+  weight = 140
+  parent = 'Product-2'
+[[menu.footer]]
+  name = 'Support'
+  url = '#'
+  weight = 145
+  parent = 'Product-2'
+[[menu.footer]]
+  name = 'Resources'
+  url = '#'
+  weight = 150
+  parent = 'Product-2'
+[[menu.footer]]
+  name = 'Security'
+  url = '#'
+  weight = 155
+  parent = 'Product-2'
+
+[[menu.footer]]
+  identifier = 'About'
+  name = 'About'
+  weight = 20
+[[menu.footer]]
+  name = 'Contact Us'
+  url = '#'
+  weight = 110
+  parent = 'About'
+[[menu.footer]]
+  name = 'Partners'
+  url = '#'
+  weight = 115
+  parent = 'About'
+[[menu.footer]]
+  name = 'Press'
+  url = '#'
+  weight = 120
+  parent = 'About'
+[[menu.footer]]
+  name = 'Our Team'
+  url = '#'
+  weight = 125
+  parent = 'About'
+[[menu.footer]]
+  name = 'Careers'
+  url = '#'
+  weight = 130
+  parent = 'About'
+[[menu.footer]]
+  name = 'Legal'
+  url = '#'
+  weight = 135
+  parent = 'About'
+
+[[menu.footer]]
+  identifier = 'Social'
+  name = 'Social'
+  weight = 30
+[[menu.footer]]
+  name = 'Blog'
+  url = '#'
+  weight = 110
+  parent = 'Social'
+[[menu.footer]]
+  name = 'Espanol'
+  url = '#'
+  weight = 115
+  parent = 'Social'
+[[menu.footer]]
+  name = 'Japanese'
+  url = '#'
+  weight = 120
+  parent = 'Social'
+[[menu.footer]]
+  name = 'Instagram'
+  url = '#'
+  weight = 125
+  parent = 'Social'
+[[menu.footer]]
+  name = 'Twitter'
+  url = '#'
+  weight = 130
+  parent = 'Social'
