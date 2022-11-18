@@ -1,0 +1,35 @@
+{{ $slides := where site.RegularPages "Type" "carousel" }}
+
+<section id="carouselIndicators" class="carousel slide shadow" data-ride="carousel" data-interval="false">
+  <ol class="carousel-indicators">
+    {{ range $key, $value := $slides }}
+      {{ $active := "" }}
+      {{ if eq $key 0 }}
+        {{ $active = "active" }}
+      {{ end }}
+      <li data-target="#carouselIndicators" data-slide-to="{{ $key }}" class="{{ $active }}"></li>
+    {{ end }}
+  </ol>
+  <div class="carousel-inner">
+    {{ range $key, $value := $slides }}
+    {{ $active := "" }}
+    {{ if eq $key 0 }}
+      {{ $active = "active" }}
+    {{ end }}
+      <div class="carousel-item {{ $active}}">
+        <div class="d-none d-md-block w-75">
+          <h5>{{ .Title }} </h5>
+          <p>{{ .Params.lede }}</p>
+        </div>
+        {{ with .Resources.GetMatch .Params.imageSrc }}
+          <img class="d-block" src="{{.RelPermalink}}" alt="{{.Title}}">
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+  <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+    <svg width="27" height="52" viewBox="0 0 27 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L26.1688 26.1688L1 51.3377" stroke="black"/>
+    </svg>
+  </a>
+</section>
