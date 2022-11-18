@@ -2,22 +2,24 @@
   "data": [
     {
       "name": "airbnb",
-      "logo": "airbnb",
+      "isLogoSrcLocal": true,
+      "logoSrc": "images/airbnb.png",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "#FF5A5F"
     },
     {
       "name": "peloton",
-      "logo": "peloton",
+      "isLogoSrcLocal": true,
+      "logoSrc": "images/peloton.png",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "#000000"
     },
     {
       "name": "adroll",
       "isLogoSrcLocal": true,
       "logoSrc": "images/adroll.png",
       "isFeatured": true,
-      "backgroundColor": "pink",
+      "backgroundColor": "#F5F5F5",
       "quote": "Datadog has been instrumental in managing our real-time infrastructure, globally distributed in 5 data centers across hundreds of instances, and thousands of different metrics and dimensions for each host. I can't believe there was a time when we didn't have Datadog.",
       "author": "Valentino Volonghi",
       "subtitle": "Chief Technology Officer"
@@ -26,37 +28,37 @@
       "name": "evernote",
       "logo": "evernote",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "292929"
     },
     {
       "name": "samsung",
       "logo": "samsung",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "1428A0"
     },
     {
       "name": "nginx",
       "logo": "nginx",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "00AA4E"
     },
     {
       "name": "pagerduty",
       "logo": "pagerduty",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "5DBD5F"
     },
     {
       "name": "whole foods",
       "logo": "wholefoods",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "000000"
     },
     {
       "name": "at&t",
       "logo": "at&t",
       "isFeatured": false,
-      "backgroundColor": "pink"
+      "backgroundColor": "00A8E0"
     }
   ]
 }

@@ -1,16 +1,36 @@
-<section class="customers">
+<section class="customers shadow-sm">
   {{ $customers := .Site.Data.customers.data }}
   {{ range $customer := $customers }}
     {{ if $customer.isFeatured }}
-      <div>
+      <div class="featured">
         {{ $image := resources.Get $customer.logoSrc }}
-        <img src="{{$image.RelPermalink}}" alt="{{$customer.name}} logo">
-        <p>{{ $customer.quote }}</p>
-        <p>{{ $customer.author }}</p>
-        <p>{{ $customer.subtitle }}</p>
+        <img class="mb-4" src="{{$image.RelPermalink}}" alt="{{$customer.name}} logo">
+        <p class="my-0">{{ $customer.quote }}</p>
+        <div class="attribution">
+          <p class="mt-2 mb-0">{{ $customer.author }}</p>
+          <p class="my-0 text-uppercase">{{ $customer.subtitle }}</p>
+        </div>
+        <a href="#">See More Stories</a>
       </div>
-    {{ else }}
-      <img src="https://imgix.datadoghq.com/img/customers/logos/{{$customer.logo}}.png?h=100&dpr=2&auto=compress,format" alt="{{$customer.name}} logo">
+    {{ else if $customer.isLogoSrcLocal }}
+    {{ $image := resources.Get $customer.logoSrc }}
+      <img 
+        width="186"
+        height="184"
+        src="{{$image.RelPermalink}}" 
+        alt="{{$customer.name}} logo"
+        class="logo"
+        style="background-color: {{$customer.backgroundColor}};"
+      >
+      {{ else }}
+      <img 
+        width="186" 
+        height="184" 
+        src="https://imgix.datadoghq.com/img/customers/logos/{{$customer.logo}}.png?h=100&dpr=2&auto=compress,format&bg={{$customer.backgroundColor}}" 
+        class="logo"
+        alt="{{$customer.name}} logo"
+        style="border-color: #{{$customer.backgroundColor}};"
+      >
     {{ end }}
   {{ end }}
 </section>
