@@ -6,7 +6,7 @@
 
 .content-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-flow: dense;
   gap: 30px;
 
@@ -15,5 +15,35 @@
   }
   .customers {
     grid-row: span 3;
+  }
+
+  @include media-breakpoint-up(lg) { 
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include media-breakpoint-up(xl) { 
+    grid-template-columns: repeat(auto-fit, minmax(458px, 1fr));
+  }
+
+  @media (min-width: 1690px) { 
+    .carousel {
+      grid-row: span 1;
+    }
+    .customers {
+      grid-row: span 1;
+      grid-column: span 2;
+    }
+  }
+
+  @media (min-width: 2666px) { 
+    .carousel {
+      grid-column: span 2;
+    }
+  }
+
+  @media (min-width: 2178px) { 
+    .customers {
+      grid-column: 1 / -1;
+    }
   }
 }

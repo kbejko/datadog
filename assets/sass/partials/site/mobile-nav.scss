@@ -1,0 +1,11 @@
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: $purple;
+
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}

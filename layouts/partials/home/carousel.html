@@ -17,9 +17,10 @@
       {{ $active = "active" }}
     {{ end }}
       <div class="carousel-item {{ $active}}">
-        <div class="d-none d-md-block w-75">
+        <div class="w-75 mb-5">
           <h5>{{ .Title }} </h5>
           <p>{{ .Params.lede }}</p>
+          <a href="#">Read More</a>
         </div>
         {{ with .Resources.GetMatch .Params.imageSrc }}
           <img class="d-block" src="{{.RelPermalink}}" alt="{{.Title}}">

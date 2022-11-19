@@ -2,7 +2,7 @@
   {{ range where site.RegularPages "Type" "posts" }}
   {{ $theme := .Params.theme}}
   {{ with .Resources.GetMatch .Params.imageSrc }}
-  <div class="postcard d-flex flex-column justify-content-center align-items-center theme-{{$theme}}" style="background-image: url({{.RelPermalink}})">
+  <div class="postcard d-flex flex-column justify-content-center align-items-center px-2 theme-{{$theme}}" style="background-image: url({{.RelPermalink}})">
   {{ end }}
     <p class="text-uppercase">{{.Params.tag}}</p>
     <h3>{{.Title}}</h3>

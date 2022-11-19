@@ -12,21 +12,33 @@ body {
 }
 
 .base-wrapper {
+  position: relative;
   display: grid;
-  grid-template-columns: minmax(max-content, 166px) 1fr minmax(0, 60px);
-  grid-template-areas: 
-    "nav main ."
-    "footer footer footer";
+  grid-template-columns: minmax(0, 12px) 1fr minmax(0, 12px);
 
-  .site-nav {
-    grid-area: nav;
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: minmax(max-content, 166px) 1fr minmax(0, 60px);
+    grid-template-areas: 
+      "nav main ."
+      "footer footer footer";
+    
+    .site-nav {
+      grid-area: nav;
+    }
+    .site-main {
+      grid-area: main;
+      padding-inline-start: 30px;
+    }
+    .site-footer {
+      grid-area: footer
+    }
+  }
+
+  .mobile-nav, .site-footer {
+    grid-column: 1 / 4
   }
   .site-main {
-    grid-area: main;
+    grid-column: 2 / 3;
     padding-block: 36px 108px;
-    padding-inline-start: 30px;
-  }
-  .site-footer {
-    grid-area: footer
   }
 }

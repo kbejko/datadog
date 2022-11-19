@@ -1,5 +1,4 @@
 .carousel {
-  max-width: 556px;
   background-color: $gray-light;
   padding: 32px 0 28px 24px;
 
@@ -11,7 +10,8 @@
   img {
     aspect-ratio: 5 / 3;
     object-fit: cover;
-    height: 260px;
+    max-height: 320px;
+    height: 100%;
     width: 100%;
   }
 }
