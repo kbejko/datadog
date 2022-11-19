@@ -1,11 +1,10 @@
 {{ define "main" }}
-  <header class="d-flex flex-column">
-    <h1>{{.Params.title}}</h1>
-    <h2>{{.Params.subtitle}}</h2>
-    <button type="button" class="btn btn-outline-primary">{{.Params.cta}}</button>
-  </header>
-  {{ partial "pricing.html" . }}
-  {{ partial "postcards.html" . }}
-  {{ partial "customers.html" . }}
-  {{ partial "carousel.html" . }}
+  <div class="home-wrapper">
+    {{ partial "home/header.html" . }}
+    <div class="content-wrapper">
+      {{ partial "home/postcards.html" . }}
+      {{ partial "home/carousel.html" . }}
+      {{ partial "home/customers.html" . }}
+    </div>
+  </div>
 {{ end }}

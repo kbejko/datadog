@@ -1,0 +1,51 @@
+.site-footer {
+  grid-column: 1/3;
+  background: linear-gradient(180deg, #443E48 0%, #110617 100%);
+  color: $gray;
+  display: grid;
+  grid-template-columns: 166px max-content minmax(0, 228px) 1fr 60px;
+  padding-block: 48px 32px;
+
+  .btn, .copyright {
+    grid-column: 2;
+  }
+
+  .copyright {
+    align-self: end;
+  }
+
+  .main-links {
+    grid-column: 4;
+
+    h5 {
+      border-bottom: 1px solid $gray;
+    }
+  }
+  
+  .legal-links {
+    grid-column: 1 / span all;
+
+    ul {
+      gap: 8px;
+    }
+    li:not(:last-child):after {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      width: 2px;
+      background-color: $gray;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+}

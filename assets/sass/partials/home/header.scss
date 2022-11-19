@@ -1,0 +1,44 @@
+.home-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: minmax(min-content, 22rem) 1fr;
+
+    .header-copy {
+      display: flex;
+      flex-flow: column;
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        padding-block: 24px;
+        margin-top: auto;
+      }
+    }
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 3.75vw, 3rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+  h2 {
+    font-size: clamp(1rem, 2.75vw, 1.75rem);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  .btn {
+    font-size: clamp(1rem, 2.75vw, 1.5rem);
+    font-weight: 600;
+    border: 3px solid $purple;
+    color: $purple;
+    text-transform: uppercase;
+    border-radius: 0;
+    margin-top: 16px;
+  }
+}

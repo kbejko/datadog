@@ -1,0 +1,8 @@
+<header class="home-header">
+  <section class="header-copy">
+    <h1>{{.Params.title}}</h1>
+    <h2>{{.Params.subtitle}}</h2>
+    <button type="button" class="btn">{{.Params.cta}}</button>
+  </section>
+  {{ partial "home/pricing.html" . }}
+</header>

@@ -1,0 +1,19 @@
+@import "header";
+@import "pricing";
+@import "postcard";
+@import "customers";
+@import "carousel";
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
+  gap: 30px;
+
+  .carousel {
+    grid-row: span 2;
+  }
+  .customers {
+    grid-row: span 3;
+  }
+}
