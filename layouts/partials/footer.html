@@ -1,8 +1,10 @@
 <footer class="site-footer">
-  <button type="button" class="btn btn-outline-primary">Free Trial</button>
-  <p class="copyright">© Datadog 2017</p>
-  <section class="main-links row">
-    <div class="col-6">
+  <section class="cta">
+    <button type="button" class="btn btn-outline-light">Free Trial</button>
+    <p class="copyright">© Datadog 2017</p>
+  </section>
+  <section class="main-links">
+    <div>
       <h5>Product</h5>
       <div class="d-flex">
         {{ range where .Site.Menus.footer "Identifier" "Product-1"}}
@@ -23,7 +25,7 @@
     </div>
 
     {{ range where .Site.Menus.footer "Name" "!=" "Product"}}
-      <div class="col">
+      <div>
         <h5>{{ .Name }}</h5>
         <ul>
           {{ range .Children }}
@@ -34,7 +36,8 @@
     {{ end }}
   </section>
   <section class="legal-links">
-    <ul class="d-flex justify-content-center">
+    <ul class="d-flex align-items-center justify-content-center">
+      <li class="copyright-mobile">© Datadog 2017</li>
       <li><a href="#">Terms</a></li>
       <li><a href="#">Privacy</a></li>
       <li><a href="#">Cookies</a></li>
